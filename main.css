@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin: 20px auto;
+  width: 1000px;
+}
+.info-game {
+  display: flex;
+  background-color: #607d8b17;
+}
+.name,
+.category {
+  flex: 1;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+  height: 50px;
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.category span {
+  color: #2196f382;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.the-row {
+  display: flex;
+  width: 900px;
+  height: 400px;
+  background-color: #fff;
+  margin-left: 50px;
+}
+.hangman-draw {
+  flex: 1;
+}
+
+.the-draw {
+  position: relative;
+  width: 100px;
+  height: 100%;
+}
+.the-stand {
+  position: absolute;
+  border: solid 3px #2196f382;
+  width: 100%;
+  top: 95%;
+  display: none;
+}
+
+.the-hang {
+  position: absolute;
+  border: solid 3px #2196f382;
+  height: 90%;
+  top: 20px;
+  left: 50%;
+  display: none;
+}
+.the-hang::before {
+  content: "";
+  position: absolute;
+  border: solid 3px #2196f382;
+  width: 100px;
+  top: 20px;
+  left: 50%;
+  display: none;
+}
+.the-hang::after {
+  content: "";
+  position: absolute;
+  border: solid 3px #2196f382;
+  height: 50px;
+  top: 20px;
+  left: 100px;
+  display: none;
+}
+
+.the-rope {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  border: solid 3px #2196f382;
+  left: 120px;
+  top: 99px;
+  display: none;
+}
+
+.the-man {
+  position: relative;
+}
+.the-man .head {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  border: solid 3px #9e9e9e;
+  left: 127px;
+  top: 106px;
+  display: none;
+}
+.the-man .body {
+  height: 110px;
+  border: solid 2px#9e9e9e;
+  position: absolute;
+  left: 152px;
+  top: 161px;
+  display: none;
+}
+.the-man .hands {
+  position: relative;
+  display: none;
+}
+.the-man .hands::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border: solid 2px#9e9e9e;
+  left: 143px;
+  top: 175px;
+  rotate: -45deg;
+}
+.the-man .hands::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border: solid 2px#9e9e9e;
+  left: 91px;
+  top: 175px;
+  rotate: 45deg;
+}
+.the-man .legs {
+  position: relative;
+  display: none;
+}
+.the-man .legs::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border: solid 2px#9e9e9e;
+  left: 143px;
+  top: 294px;
+  rotate: 45deg;
+}
+.the-man .legs::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border: solid 2px#9e9e9e;
+  left: 91px;
+  top: 294px;
+  rotate: -45deg;
+}
+.hangman-draw.wrong-1 .the-stand {
+  display: block;
+}
+.hangman-draw.wrong-2 .the-hang {
+  display: block;
+}
+.hangman-draw.wrong-3 .the-hang::before {
+  display: block;
+}
+.hangman-draw.wrong-4 .the-hang::after {
+  display: block;
+}
+.hangman-draw.wrong-5 .the-rope {
+  display: block;
+}
+.hangman-draw.wrong-6 .the-man .head {
+  display: block;
+}
+.hangman-draw.wrong-7 .the-man .body {
+  display: block;
+}
+.hangman-draw.wrong-8 .the-man .hands {
+  display: block;
+}
+.hangman-draw.wrong-9 .the-man .legs {
+  display: block;
+}
+.letters {
+  flex: 1;
+  text-align: center;
+}
+.letters .letter-box {
+  width: 51px;
+  display: inline-block;
+  margin: 9px;
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid black;
+  background-color: #607d8b17;
+  top: 55px;
+  position: relative;
+  cursor: pointer;
+}
+.letters .letter-box.clicked {
+  opacity: 0.5;
+  pointer-events: none;
+  border: none;
+}
+.letters.finished {
+  opacity: 0.5;
+  pointer-events: none;
+  border: none;
+}
+
+.guess-span {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.guess-span span {
+  width: 40px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid black;
+  background-color: #607d8b17;
+}
+.guess-span span.with-space {
+  width: 40px;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  bottom: 20px;
+}
+.pop-up {
+  font-size: 28px;
+  text-align: center;
+  position: relative;
+  bottom: 380px;
+  height: 80px;
+  width: 450px;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: #8000d4e6;
+  left: 250px;
+  color: wheat;
+}

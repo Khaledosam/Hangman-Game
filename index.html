@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hangman-khaled</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="info-game">
+        <div class="name">Hangman Game</div>
+        <div class="category">Categorey: <span></span></div>
+      </div>
+      <div class="the-row">
+        <div class="hangman-draw">
+          <div class="the-draw">
+            <div class="the-stand"></div>
+            <div class="the-hang"></div>
+            <div class="the-rope"></div>
+            <div class="the-man">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="hands"></div>
+              <div class="legs"></div>
+            </div>
+          </div>
+        </div>
+        <div class="letters"></div>
+      </div>
+      <div class="guess-span"></div>
+    </div>
+    <audio src="./negative_beeps-6008.mp3" id="fail" preload="auto"></audio>
+    <audio src="./success-1-6297.mp3" id="sucess" preload="auto"></audio>
+    <script src="main.js"></script>
+  </body>
+</html>
